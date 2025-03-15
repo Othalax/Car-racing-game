@@ -27,12 +27,12 @@ void State::endState(){
 }
 
 void State::update(const float& dt){
-    this->player.update(dt);
+    this->player->update(dt);
     //std::cout<<"StateUpdate"<<std::endl;
 }
 
 void State::render(sf::RenderTarget& target){
-    this->player.render(*this->window);
+    this->player->render(*this->window);
     //std::cout<<"StateRender"<<std::endl;
 }
 

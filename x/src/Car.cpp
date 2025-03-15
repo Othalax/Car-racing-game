@@ -1,7 +1,18 @@
 #include "Car.h"
 
-Car::Car()
+Car::Car(float x, float y, float angle, float length, float max_steering, float max_acceleration)
 {
+    position = sf::Vector2f(x, y);
+    velocity = sf::Vector2f(0.0f, 0.0f);
+    this->angle = angle;
+    this->length = length;
+    this->max_acceleration = max_acceleration;
+    this->max_steering = max_steering;
+    max_velocity = 100.0f;
+    brake_deceleration = 20.0f;
+    free_deceleration = 40.0f;
+    acceleration = 0.0f;
+    steering = 0.0f;
 
     if (!texture.loadFromFile("textures/pinkcar.png", false, sf::IntRect({10, 10}, {32, 32})))
     {
@@ -10,9 +21,9 @@ Car::Car()
 
     this->texture = sf::Texture("textures/pinkcar.png");
     this->car = new sf::Sprite(texture);
-    this->car->setOrigin({100.f, 0.f});
-    this->car->setPosition({200.f, 200.f});
-    alfa = 0;
+    this->car->setOrigin({100.f, 50.f});
+    this->car->setPosition({x, y});
+    this->car->rotate(sf::degrees(90));
 }
 
 Car::~Car()
@@ -21,40 +32,53 @@ Car::~Car()
 }
 
 void Car::ride(const float& dt, float direction){
-    //std::cout<<"CarRide\n";
-    float sina = round(sin((direction+this->alfa)*3.14/180)*100.00)/100.00, cosa = round(cos((direction+this->alfa)*3.14/180)*100.00)/100.00;
-    if(round(sina)==0){
-        this->car->move({0.f, (-60.f/cosa)*dt});
-    }
-    else if(round(cosa)==0){
-        this->car->move({(60.f/sina)*dt, 0.f});
-    }
-    else{
-        this->car->move({(60.f/sina)*dt, (-60.f/cosa)*dt});
-    }
+
 }
 
 void Car::veer(const float& dt, float direction){
-    //std::cout<<alfa<<'\n';
-    float degrees = round(30*dt*direction*100.00)/100.00;
-    this->car->rotate(sf::degrees(degrees));
-    this->alfa+=degrees;
+
 }
 
-void Car::update(const float& dt){
-    //std::cout<<"CarUpdate\n";
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Up) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W)){
-        this->ride(dt, 0.f);
+void Car::update(const float& dt) {
+
+    velocity.x += acceleration * dt;
+    velocity.x = std::clamp(velocity.x, -max_velocity, max_velocity);
+
+    float angular_velocity = 0.0f;
+    if (std::abs(steering) > 0.01f) {
+        float turning_radius = length / std::tan(steering * M_PI / 180.0f);
+        angular_velocity = velocity.x / turning_radius;
     }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S)){
-        this->ride(dt, 180.f);
+
+    position.x += velocity.x * std::cos(angle * M_PI / 180.0f) * dt;
+    position.y += velocity.x * std::sin(angle * M_PI / 180.0f) * dt;
+    angle += angular_velocity * dt * (180.0f / M_PI);
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W)) {
+        acceleration = std::min(acceleration + 50.0f * dt, max_acceleration);
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S)) {
+        acceleration = std::max(acceleration - 50.0f * dt, -max_acceleration);
+    } else {
+        if (std::abs(velocity.x) > dt * free_deceleration)
+            acceleration = -std::copysign(free_deceleration, velocity.x);
+        else
+            acceleration = -velocity.x / dt;
     }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A)){
-        this->veer(dt, -1.f);
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space)) {
+        acceleration = -std::copysign(brake_deceleration, velocity.x);
     }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Right) || sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D)){
-        this->veer(dt, 1.f);
+
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A)) {
+        steering = std::max(steering - 50 * dt, -max_steering);
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D)) {
+        steering = std::min(steering + 50 * dt, max_steering);
+    } else {
+        steering *= 0.8f;
     }
+
+    this->car->setPosition(position);
+    this->car->setRotation(sf::degrees(angle));
 }
 
 void Car::render(sf::RenderTarget& target){

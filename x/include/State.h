@@ -9,7 +9,7 @@ protected:
     sf::RenderWindow* window;
     std::vector<sf::Texture> textures;
     bool ifEnd;
-    Car player;
+    Car* player = new Car(200.f, 200.f, 0.f, 100.f, 30.f, 200.f);
 
 public:
     State(sf::RenderWindow* window);
