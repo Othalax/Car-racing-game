@@ -31,28 +31,9 @@ Car::~Car()
     delete this->car;
 }
 
-void Car::ride(const float& dt, float direction){
-
-}
-
-void Car::veer(const float& dt, float direction){
-
-}
-
-void Car::update(const float& dt) {
-
+void Car::ride(const float& dt){
     velocity.x += acceleration * dt;
     velocity.x = std::clamp(velocity.x, -max_velocity, max_velocity);
-
-    float angular_velocity = 0.0f;
-    if (std::abs(steering) > 0.01f) {
-        float turning_radius = length / std::tan(steering * M_PI / 180.0f);
-        angular_velocity = velocity.x / turning_radius;
-    }
-
-    position.x += velocity.x * std::cos(angle * M_PI / 180.0f) * dt;
-    position.y += velocity.x * std::sin(angle * M_PI / 180.0f) * dt;
-    angle += angular_velocity * dt * (180.0f / M_PI);
 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W)) {
         acceleration = std::min(acceleration + 50.0f * dt, max_acceleration);
@@ -64,18 +45,35 @@ void Car::update(const float& dt) {
         else
             acceleration = -velocity.x / dt;
     }
+}
 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Space)) {
-        acceleration = -std::copysign(brake_deceleration, velocity.x);
+void Car::veer(const float& dt){
+    float angular_velocity = 0.0f;
+    if (std::abs(steering) > 0.01f) {
+        float turning_radius = length / std::tan(steering * M_PI / 180.0f);
+        angular_velocity = velocity.x / turning_radius;
     }
+    position.x += velocity.x * std::cos(angle * M_PI / 180.0f) * dt;
+    position.y += velocity.x * std::sin(angle * M_PI / 180.0f) * dt;
+    angle += angular_velocity * dt * (180.0f / M_PI);
 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A)) {
+     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A)) {
         steering = std::max(steering - 50 * dt, -max_steering);
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D)) {
         steering = std::min(steering + 50 * dt, max_steering);
     } else {
         steering *= 0.8f;
     }
+}
+
+void Car::update(const float& dt) {
+
+    if (car->getScale() != sf::Vector2f(1.f, 1.f)) {
+        car->setScale(sf::Vector2f(1.f, 1.f));
+    }
+
+    ride(dt);
+    veer(dt);
 
     this->car->setPosition(position);
     this->car->setRotation(sf::degrees(angle));

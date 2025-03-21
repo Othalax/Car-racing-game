@@ -548,13 +548,13 @@
 1739962299 source:c:\users\domin\documents\car-racing-game\x\main.cpp
 	"Game.h"
 
-1741363741 c:\users\domin\documents\car-racing-game\x\include\game.h
+1742568805 c:\users\domin\documents\car-racing-game\x\include\game.h
 	<State.h>
 
 1742076203 c:\users\domin\documents\car-racing-game\x\include\state.h
 	<Car.h>
 
-1742076252 c:\users\domin\documents\car-racing-game\x\include\car.h
+1742578290 c:\users\domin\documents\car-racing-game\x\include\car.h
 	<SFML/Graphics.hpp>
 	<SFML/Window.hpp>
 	<SFML/System/Vector2.hpp>
@@ -569,12 +569,12 @@
 	<map>
 	<memory>
 
-1741440266 source:c:\users\domin\documents\car-racing-game\x\src\game.cpp
+1742570451 source:c:\users\domin\documents\car-racing-game\x\src\game.cpp
 	"Game.h"
 
 1742066448 source:c:\users\domin\documents\car-racing-game\x\src\state.cpp
 	"State.h"
 
-1742075907 source:c:\users\domin\documents\car-racing-game\x\src\car.cpp
+1742408321 source:c:\users\domin\documents\car-racing-game\x\src\car.cpp
 	"Car.h"
 

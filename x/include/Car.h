@@ -42,8 +42,8 @@ public:
     float acceleration;
     float steering;
 
-    void ride(const float& dt, float direction);
-    void veer(const float& dt, float direction);
+    void ride(const float& dt);
+    void veer(const float& dt);
     void update(const float& dt);
     void render(sf::RenderTarget& target);
 };

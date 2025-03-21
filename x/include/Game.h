@@ -6,6 +6,7 @@
 class Game {
 private:
     std::unique_ptr<sf::RenderWindow> window;
+    sf::View view;
 
     sf::Clock dtClock;
     float dt;

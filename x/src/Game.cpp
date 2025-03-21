@@ -31,6 +31,7 @@ void Game::initWindow(){
     window = std::make_unique<sf::RenderWindow>(windowBounds, title);
     window->setFramerateLimit(framerate);
     window->setVerticalSyncEnabled(verticalSync);
+    view = window->getDefaultView();
 }
 
 void Game::endApp(){
@@ -50,6 +51,10 @@ void Game::updateEvents(){
     while (const std::optional event = this->window->pollEvent()) {
         if (event->is<sf::Event::Closed>())
             this->window->close();
+        else if (const auto* resized = event->getIf<sf::Event::Resized>()) {
+            view.setSize({static_cast<float>(resized->size.x), static_cast<float>(resized->size.y)});
+            window->setView(view);
+        }
     }
 }
 
