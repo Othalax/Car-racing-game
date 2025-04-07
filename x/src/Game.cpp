@@ -5,6 +5,7 @@ Game::Game()
 {
     this->initWindow();
     this->initStates();
+    this->initKeybinds();
 }
 
 Game::~Game()
@@ -34,12 +35,26 @@ void Game::initWindow(){
     view = window->getDefaultView();
 }
 
+void Game::initKeybinds(){
+    std::ifstream ifs("config/supportedKeys.ini");
+    std::string keyName;
+    int id;
+
+    if (ifs.is_open()) {
+        while (ifs >> keyName >> id) {
+           supportedKeys[keyName] = static_cast<sf::Keyboard::Key>(id);
+        }
+    }
+    std::cout<<supportedKeys.size();
+    ifs.close();
+}
+
 void Game::endApp(){
     std::cout<<"GameEndApp"<<std::endl;
 }
 
 void Game::initStates(){
-    states.push_back(std::make_unique<State>(this->window.get()));
+    states.push_back(std::make_unique<GameState>(this->window.get()));
 
 }
 

@@ -1,7 +1,8 @@
 #include "Car.h"
 
-Car::Car(float x, float y, float angle, float length, float max_steering, float max_acceleration)
+Car::Car(std::unordered_map<std::string,sf::Keyboard::Key> keys, std::string color, float x, float y, float angle, float length, float max_steering, float max_acceleration)
 {
+    this->keys = keys;
     position = sf::Vector2f(x, y);
     velocity = sf::Vector2f(0.0f, 0.0f);
     this->angle = angle;
@@ -14,12 +15,12 @@ Car::Car(float x, float y, float angle, float length, float max_steering, float 
     acceleration = 0.0f;
     steering = 0.0f;
 
-    if (!texture.loadFromFile("textures/pinkcar.png", false, sf::IntRect({10, 10}, {32, 32})))
+    if (!texture.loadFromFile(color, false, sf::IntRect({10, 10}, {32, 32})))
     {
         std::cout<<"error\n";
     }
 
-    this->texture = sf::Texture("textures/pinkcar.png");
+    this->texture = sf::Texture(color);
     this->car = new sf::Sprite(texture);
     this->car->setOrigin({100.f, 50.f});
     this->car->setPosition({x, y});
@@ -35,9 +36,9 @@ void Car::ride(const float& dt){
     velocity.x += acceleration * dt;
     velocity.x = std::clamp(velocity.x, -max_velocity, max_velocity);
 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::W)) {
+    if (sf::Keyboard::isKeyPressed(keys["forward"])) {
         acceleration = std::min(acceleration + 50.0f * dt, max_acceleration);
-    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::S)) {
+    } else if (sf::Keyboard::isKeyPressed(keys["backward"])) {
         acceleration = std::max(acceleration - 50.0f * dt, -max_acceleration);
     } else {
         if (std::abs(velocity.x) > dt * free_deceleration)
@@ -57,9 +58,9 @@ void Car::veer(const float& dt){
     position.y += velocity.x * std::sin(angle * M_PI / 180.0f) * dt;
     angle += angular_velocity * dt * (180.0f / M_PI);
 
-     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::A)) {
+     if (sf::Keyboard::isKeyPressed(keys["left"])) {
         steering = std::max(steering - 50 * dt, -max_steering);
-    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key::D)) {
+    } else if (sf::Keyboard::isKeyPressed(keys["right"])) {
         steering = std::min(steering + 50 * dt, max_steering);
     } else {
         steering *= 0.8f;

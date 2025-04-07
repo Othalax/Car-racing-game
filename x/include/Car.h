@@ -14,6 +14,7 @@
 #include <stack>
 #include <map>
 #include <memory>
+#include <string>
 
 class Car {
 private:
@@ -26,8 +27,10 @@ private:
         return sf::Vector2f(vec.x * cos_a - vec.y * sin_a, vec.x * sin_a + vec.y * cos_a);
     }
 
+    std::unordered_map<std::string,sf::Keyboard::Key> keys;
+
 public:
-    Car(float x, float y, float angle, float length = 100.0f, float max_steering = 30.0f, float max_acceleration = 200.0f);
+    Car(std::unordered_map<std::string,sf::Keyboard::Key> keys, std::string color, float x, float y, float angle, float length = 100.0f, float max_steering = 30.0f, float max_acceleration = 200.0f);
     virtual ~Car();
 
     sf::Vector2f position;

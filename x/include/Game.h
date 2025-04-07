@@ -1,7 +1,8 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include <State.h>
+#include <GameState.h>
+#include <MenuState.h>
 
 class Game {
 private:
@@ -12,9 +13,11 @@ private:
     float dt;
 
     std::vector<std::unique_ptr<State>> states;
+    std::unordered_map<std::string,sf::Keyboard::Key> supportedKeys;
 
     void initWindow();
     void initStates();
+    void initKeybinds();
 
 public:
     Game();

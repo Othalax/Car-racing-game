@@ -2,7 +2,7 @@
 1739962299 source:c:\users\domin\documents\x\main.cpp
 	"Game.h"
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics.hpp
 	<SFML/Graphics/BlendMode.hpp>
 	<SFML/Graphics/CircleShape.hpp>
 	<SFML/Graphics/Color.hpp>
@@ -32,22 +32,22 @@
 	<SFML/Graphics/View.hpp>
 	<SFML/Window.hpp>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\blendmode.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\blendmode.hpp
 	<SFML/Graphics/Export.hpp>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\export.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\export.hpp
 	<SFML/Config.hpp>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\config.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\config.hpp
 	"TargetConditionals.h"
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\circleshape.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\circleshape.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Shape.hpp>
 	<SFML/System/Vector2.hpp>
 	<cstddef>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\shape.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\shape.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Color.hpp>
 	<SFML/Graphics/Drawable.hpp>
@@ -59,75 +59,75 @@
 	<SFML/System/Vector2.hpp>
 	<cstddef>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\color.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\color.hpp
 	<cstdint>
 	<SFML/Graphics/Color.inl>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\color.inl
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\color.inl
 	<SFML/Graphics/Color.hpp>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\drawable.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\drawable.hpp
 	<SFML/Graphics/Export.hpp>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\primitivetype.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\primitivetype.hpp
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\rect.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\rect.hpp
 	<SFML/System/Vector2.hpp>
 	<optional>
 	<SFML/Graphics/Rect.inl>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\vector2.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\vector2.hpp
 	<SFML/System/Export.hpp>
 	<SFML/System/Angle.hpp>
 	<SFML/System/Vector2.inl>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\export.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\export.hpp
 	<SFML/Config.hpp>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\angle.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\angle.hpp
 	<SFML/System/Angle.inl>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\angle.inl
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\angle.inl
 	<SFML/System/Angle.hpp>
 	<cassert>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\vector2.inl
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\vector2.inl
 	<SFML/System/Vector2.hpp>
 	<cassert>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\rect.inl
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\rect.inl
 	<SFML/Graphics/Rect.hpp>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\renderstates.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\renderstates.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/BlendMode.hpp>
 	<SFML/Graphics/CoordinateType.hpp>
 	<SFML/Graphics/StencilMode.hpp>
 	<SFML/Graphics/Transform.hpp>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\coordinatetype.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\coordinatetype.hpp
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\stencilmode.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\stencilmode.hpp
 	<SFML/Graphics/Export.hpp>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\transform.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\transform.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Rect.hpp>
 	<SFML/System/Vector2.hpp>
 	<array>
 	<SFML/Graphics/Transform.inl>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\transform.inl
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\transform.inl
 	<SFML/Graphics/Transform.hpp>
 	<array>
 	<cstddef>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\transformable.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\transformable.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Transform.hpp>
 	<SFML/System/Angle.hpp>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\vertexarray.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\vertexarray.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Graphics/PrimitiveType.hpp>
@@ -137,17 +137,17 @@
 	<vector>
 	<cstddef>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\vertex.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\vertex.hpp
 	<SFML/Graphics/Color.hpp>
 	<SFML/System/Vector2.hpp>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\convexshape.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\convexshape.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Shape.hpp>
 	<vector>
 	<cstddef>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\font.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\font.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Glyph.hpp>
 	<SFML/Graphics/Rect.hpp>
@@ -161,11 +161,11 @@
 	<cstddef>
 	<cstdint>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\glyph.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\glyph.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Rect.hpp>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\texture.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\texture.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/CoordinateType.hpp>
 	<SFML/Graphics/Rect.hpp>
@@ -175,14 +175,14 @@
 	<cstddef>
 	<cstdint>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\glresource.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\glresource.hpp
 	<SFML/Window/Export.hpp>
 	<memory>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\export.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\export.hpp
 	<SFML/Config.hpp>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\image.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\image.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Color.hpp>
 	<SFML/Graphics/Rect.hpp>
@@ -194,13 +194,13 @@
 	<cstddef>
 	<cstdint>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\rectangleshape.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\rectangleshape.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Shape.hpp>
 	<SFML/System/Vector2.hpp>
 	<cstddef>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\rendertarget.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\rendertarget.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/BlendMode.hpp>
 	<SFML/Graphics/Color.hpp>
@@ -216,14 +216,14 @@
 	<cstddef>
 	<cstdint>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\view.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\view.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Rect.hpp>
 	<SFML/Graphics/Transform.hpp>
 	<SFML/System/Angle.hpp>
 	<SFML/System/Vector2.hpp>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\rendertexture.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\rendertexture.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/RenderTarget.hpp>
 	<SFML/Graphics/Texture.hpp>
@@ -231,11 +231,11 @@
 	<SFML/System/Vector2.hpp>
 	<memory>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\contextsettings.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\contextsettings.hpp
 	<SFML/Config.hpp>
 	<cstdint>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\renderwindow.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\renderwindow.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/RenderTarget.hpp>
 	<SFML/Window/ContextSettings.hpp>
@@ -246,12 +246,12 @@
 	<SFML/System/Vector2.hpp>
 	<cstdint>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\videomode.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\videomode.hpp
 	<SFML/Window/Export.hpp>
 	<SFML/System/Vector2.hpp>
 	<vector>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\window.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\window.hpp
 	<SFML/Window/ContextSettings.hpp>
 	<SFML/Window/GlResource.hpp>
 	<SFML/Window/WindowBase.hpp>
@@ -262,7 +262,7 @@
 	<memory>
 	<cstdint>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\windowbase.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\windowbase.hpp
 	<SFML/Window/Export.hpp>
 	<SFML/Window/Vulkan.hpp>
 	<SFML/Window/WindowEnums.hpp>
@@ -274,32 +274,32 @@
 	<cstdint>
 	<SFML/Window/WindowBase.inl>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\vulkan.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\vulkan.hpp
 	<SFML/Window/Export.hpp>
 	<vector>
 	<cstdint>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\windowenums.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\windowenums.hpp
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\windowhandle.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\windowhandle.hpp
 	<SFML/Config.hpp>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\time.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\time.hpp
 	<chrono>
 	<cstdint>
 	<SFML/System/Time.inl>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\time.inl
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\time.inl
 	<SFML/System/Time.hpp>
 	<ratio>
 	<cassert>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\windowbase.inl
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\windowbase.inl
 	<SFML/Window/Event.hpp>
 	<SFML/Window/WindowBase.hpp>
 	<utility>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\event.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\event.hpp
 	<SFML/Window/Joystick.hpp>
 	<SFML/Window/Keyboard.hpp>
 	<SFML/Window/Mouse.hpp>
@@ -308,11 +308,11 @@
 	<variant>
 	<SFML/Window/Event.inl>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\joystick.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\joystick.hpp
 	<SFML/Window/Export.hpp>
 	<SFML/System/String.hpp>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\string.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\string.hpp
 	<SFML/System/Export.hpp>
 	<SFML/System/Utf.hpp>
 	<locale>
@@ -321,7 +321,7 @@
 	<cstdint>
 	<SFML/System/String.inl>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\utf.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\utf.hpp
 	<SFML/Config.hpp>
 	<array>
 	<locale>
@@ -329,47 +329,47 @@
 	<cstdlib>
 	<SFML/System/Utf.inl>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\utf.inl
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\utf.inl
 	<SFML/System/Utf.hpp>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\string.inl
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\string.inl
 	<SFML/System/String.hpp>
 	<iterator>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\keyboard.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\keyboard.hpp
 	<SFML/Window/Export.hpp>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\mouse.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\mouse.hpp
 	<SFML/Window/Export.hpp>
 	<SFML/System/Vector2.hpp>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\sensor.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\sensor.hpp
 	<SFML/Window/Export.hpp>
 	<SFML/System/Vector3.hpp>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\vector3.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\vector3.hpp
 	<SFML/System/Export.hpp>
 	<SFML/System/Vector3.inl>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\vector3.inl
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\vector3.inl
 	<SFML/System/Vector3.hpp>
 	<cassert>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\event.inl
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\event.inl
 	<SFML/Window/Event.hpp>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\clock.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\clock.hpp
 	<SFML/System/Export.hpp>
 	<chrono>
 	<ratio>
 	<type_traits>
 	<SFML/System/SuspendAwareClock.hpp>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\suspendawareclock.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\suspendawareclock.hpp
 	<SFML/System/Export.hpp>
 	<chrono>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\shader.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\shader.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Glsl.hpp>
 	<SFML/Window/GlResource.hpp>
@@ -379,20 +379,20 @@
 	<unordered_map>
 	<cstddef>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\glsl.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\glsl.hpp
 	<SFML/System/Vector2.hpp>
 	<SFML/System/Vector3.hpp>
 	<cstddef>
 	<SFML/Graphics/Glsl.inl>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\glsl.inl
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\glsl.inl
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Color.hpp>
 	<SFML/Graphics/Glsl.hpp>
 	<array>
 	<cstddef>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\sprite.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\sprite.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Graphics/Rect.hpp>
@@ -401,7 +401,7 @@
 	<SFML/Graphics/Vertex.hpp>
 	<array>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\text.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\text.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Color.hpp>
 	<SFML/Graphics/Drawable.hpp>
@@ -415,7 +415,7 @@
 	<cstddef>
 	<cstdint>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\graphics\vertexbuffer.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\graphics\vertexbuffer.hpp
 	<SFML/Graphics/Export.hpp>
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Graphics/PrimitiveType.hpp>
@@ -423,7 +423,7 @@
 	<SFML/Window/GlResource.hpp>
 	<cstddef>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\window.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\window.hpp
 	<SFML/Window/Clipboard.hpp>
 	<SFML/Window/Context.hpp>
 	<SFML/Window/ContextSettings.hpp>
@@ -440,10 +440,10 @@
 	<SFML/Window/WindowHandle.hpp>
 	<SFML/System.hpp>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\clipboard.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\clipboard.hpp
 	<SFML/Window/Export.hpp>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\context.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\context.hpp
 	<SFML/Window/Export.hpp>
 	<SFML/Window/GlResource.hpp>
 	<SFML/System/Vector2.hpp>
@@ -451,18 +451,18 @@
 	<string_view>
 	<cstdint>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\cursor.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\cursor.hpp
 	<SFML/Window/Export.hpp>
 	<SFML/System/Vector2.hpp>
 	<memory>
 	<optional>
 	<cstdint>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\window\touch.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\window\touch.hpp
 	<SFML/Window/Export.hpp>
 	<SFML/System/Vector2.hpp>
 
-1739384175 c:\program files\sfml-3.0.0\include\sfml\system.hpp
+1739387775 c:\program files\sfml-3.0.0\include\sfml\system.hpp
 	<SFML/Config.hpp>
 	<SFML/System/Angle.hpp>
 	<SFML/System/Clock.hpp>
@@ -478,15 +478,15 @@
 	<SFML/System/Vector2.hpp>
 	<SFML/System/Vector3.hpp>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\err.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\err.hpp
 	<SFML/System/Export.hpp>
 	<iosfwd>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\exception.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\exception.hpp
 	<SFML/System/Export.hpp>
 	<stdexcept>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\fileinputstream.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\fileinputstream.hpp
 	<SFML/Config.hpp>
 	<SFML/System/Export.hpp>
 	<SFML/System/InputStream.hpp>
@@ -495,20 +495,20 @@
 	<cstdint>
 	<cstdio>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\inputstream.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\inputstream.hpp
 	<SFML/Config.hpp>
 	<SFML/System/Export.hpp>
 	<optional>
 	<cstdint>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\memoryinputstream.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\memoryinputstream.hpp
 	<SFML/Config.hpp>
 	<SFML/System/Export.hpp>
 	<SFML/System/InputStream.hpp>
 	<cstddef>
 	<cstdint>
 
-1739384176 c:\program files\sfml-3.0.0\include\sfml\system\sleep.hpp
+1739387776 c:\program files\sfml-3.0.0\include\sfml\system\sleep.hpp
 	<SFML/System/Export.hpp>
 
 1741363741 c:\users\domin\documents\x\include\game.h
@@ -545,16 +545,17 @@
 	<map>
 	<memory>
 
-1739962299 source:c:\users\domin\documents\car-racing-game\x\main.cpp
+1739965899 source:c:\users\domin\documents\car-racing-game\x\main.cpp
 	"Game.h"
 
-1742568805 c:\users\domin\documents\car-racing-game\x\include\game.h
-	<State.h>
+1743775452 c:\users\domin\documents\car-racing-game\x\include\game.h
+	<GameState.h>
+	<MenuState.h>
 
-1742076203 c:\users\domin\documents\car-racing-game\x\include\state.h
+1743367533 c:\users\domin\documents\car-racing-game\x\include\state.h
 	<Car.h>
 
-1742578290 c:\users\domin\documents\car-racing-game\x\include\car.h
+1743407169 c:\users\domin\documents\car-racing-game\x\include\car.h
 	<SFML/Graphics.hpp>
 	<SFML/Window.hpp>
 	<SFML/System/Vector2.hpp>
@@ -568,13 +569,26 @@
 	<stack>
 	<map>
 	<memory>
+	<string>
 
-1742570451 source:c:\users\domin\documents\car-racing-game\x\src\game.cpp
+1743407803 source:c:\users\domin\documents\car-racing-game\x\src\game.cpp
 	"Game.h"
 
-1742066448 source:c:\users\domin\documents\car-racing-game\x\src\state.cpp
+1743320287 source:c:\users\domin\documents\car-racing-game\x\src\state.cpp
 	"State.h"
 
-1742408321 source:c:\users\domin\documents\car-racing-game\x\src\car.cpp
+1743407443 source:c:\users\domin\documents\car-racing-game\x\src\car.cpp
 	"Car.h"
+
+1743279440 source:c:\users\domin\documents\car-racing-game\x\src\menustate.cpp
+	"MenuState.h"
+
+1743279266 c:\users\domin\documents\car-racing-game\x\include\menustate.h
+	<State.h>
+
+1743369209 c:\users\domin\documents\car-racing-game\x\include\gamestate.h
+	<State.h>
+
+1743407592 source:c:\users\domin\documents\car-racing-game\x\src\gamestate.cpp
+	"GameState.h"
 
