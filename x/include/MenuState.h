@@ -7,7 +7,7 @@ class MenuState
     : public State
 {
     public:
-        MenuState(sf::RenderWindow* window);
+        MenuState(sf::RenderWindow* window, std::unordered_map<std::string,sf::Keyboard::Key> supportedKeys);
         virtual ~MenuState();
 
         void update(const float& dt);

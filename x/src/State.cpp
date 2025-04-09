@@ -1,9 +1,10 @@
 #include "State.h"
 
-State::State(sf::RenderWindow* window)
+State::State(sf::RenderWindow* window, std::unordered_map<std::string,sf::Keyboard::Key> supportedKeys)
 {
     this->window = window;
     this->ifEnd = false;
+    this->supportedKeys = supportedKeys;
 }
 
 State::~State()
@@ -26,13 +27,18 @@ void State::endState(){
     }
 }
 
+void State::updateMousePos(){
+    this->mousePosScreen = sf::Mouse::getPosition();
+    this->mousePosWindow = sf::Mouse::getPosition(*this->window);
+    this->mousePosView = this->window->mapPixelToCoords(this->mousePosWindow);
+}
+
 void State::update(const float& dt){
-    //this->player->update(dt);
-    //std::cout<<"StateUpdate"<<std::endl;
+
 }
 
 void State::render(sf::RenderTarget& target){
-    //this->player->render(*this->window);
-    //std::cout<<"StateRender"<<std::endl;
+
 }
+
 

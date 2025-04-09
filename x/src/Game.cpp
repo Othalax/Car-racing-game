@@ -4,8 +4,8 @@
 Game::Game()
 {
     this->initWindow();
-    this->initStates();
     this->initKeybinds();
+    this->initStates();
 }
 
 Game::~Game()
@@ -54,7 +54,7 @@ void Game::endApp(){
 }
 
 void Game::initStates(){
-    states.push_back(std::make_unique<GameState>(this->window.get()));
+    states.push_back(std::make_unique<GameState>(this->window.get(), supportedKeys));
 
 }
 

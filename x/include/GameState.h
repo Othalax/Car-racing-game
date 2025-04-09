@@ -7,7 +7,7 @@
 class GameState : public State
 {
     public:
-        GameState(sf::RenderWindow* window);
+        GameState(sf::RenderWindow* window, std::unordered_map<std::string,sf::Keyboard::Key> supportedKeys);
         virtual ~GameState();
 
         void update(const float& dt);

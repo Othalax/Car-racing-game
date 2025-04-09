@@ -46,12 +46,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Button.h" />
 		<Unit filename="include/Car.h" />
 		<Unit filename="include/Game.h" />
 		<Unit filename="include/GameState.h" />
 		<Unit filename="include/MenuState.h" />
 		<Unit filename="include/State.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Button.cpp" />
 		<Unit filename="src/Car.cpp" />
 		<Unit filename="src/Game.cpp" />
 		<Unit filename="src/GameState.cpp" />
