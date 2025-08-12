@@ -2,6 +2,7 @@
 #define MENUSTATE_H
 
 #include <State.h>
+#include <Button.h>
 
 class MenuState
     : public State
@@ -14,6 +15,7 @@ class MenuState
         void render(sf::RenderTarget& target);
 
     protected:
+        Button* gamestate;
         sf::RectangleShape wiwiwi;
 
     private:

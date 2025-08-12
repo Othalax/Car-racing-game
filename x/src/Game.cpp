@@ -45,7 +45,6 @@ void Game::initKeybinds(){
            supportedKeys[keyName] = static_cast<sf::Keyboard::Key>(id);
         }
     }
-    std::cout<<supportedKeys.size();
     ifs.close();
 }
 
@@ -54,7 +53,7 @@ void Game::endApp(){
 }
 
 void Game::initStates(){
-    states.push_back(std::make_unique<GameState>(this->window.get(), supportedKeys));
+    states.push_back(std::make_unique<MenuState>(this->window.get(), supportedKeys));
 
 }
 

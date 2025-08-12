@@ -571,7 +571,7 @@
 	<memory>
 	<string>
 
-1744019798 source:c:\users\domin\documents\car-racing-game\x\src\game.cpp
+1755017505 source:c:\users\domin\documents\car-racing-game\x\src\game.cpp
 	"Game.h"
 
 1744186985 source:c:\users\domin\documents\car-racing-game\x\src\state.cpp
@@ -583,8 +583,9 @@
 1744020026 source:c:\users\domin\documents\car-racing-game\x\src\menustate.cpp
 	"MenuState.h"
 
-1744019682 c:\users\domin\documents\car-racing-game\x\include\menustate.h
+1755020106 c:\users\domin\documents\car-racing-game\x\include\menustate.h
 	<State.h>
+	<Button.h>
 
 1744019682 c:\users\domin\documents\car-racing-game\x\include\gamestate.h
 	<State.h>
@@ -592,10 +593,10 @@
 1744019701 source:c:\users\domin\documents\car-racing-game\x\src\gamestate.cpp
 	"GameState.h"
 
-1744188317 source:c:\users\domin\documents\car-racing-game\x\src\button.cpp
+1755019863 source:c:\users\domin\documents\car-racing-game\x\src\button.cpp
 	"Button.h"
 
-1744188425 c:\users\domin\documents\car-racing-game\x\include\button.h
+1755019839 c:\users\domin\documents\car-racing-game\x\include\button.h
 	<SFML/Graphics.hpp>
 	<SFML/Window.hpp>
 	<SFML/System/Vector2.hpp>
