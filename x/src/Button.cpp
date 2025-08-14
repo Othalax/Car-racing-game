@@ -4,20 +4,18 @@ Button::Button(float x, float y, float width, float height, std::string message,
 {
     this->state = idle;
 
-    if (!this->font->openFromFile("textures/fonts/NicoPaint-Monospaced.ttf")) {
+    if (!this->font.openFromFile("textures/fonts/NicoPaint-Monospaced.ttf")) {
         std::cout << "Error loading font\n";
     }
 
-    this->font = new sf::Font("textures/fonts/NicoPaint-Monospaced.ttf");
     this->button.setPosition(sf::Vector2f(x, y));
     this->button.setSize(sf::Vector2f(width, height));
-    this->text->setFont(*this->font);
-    this->text->setString(message);
+    this->text = new sf::Text(this->font, message, 20);
     this->text->setFillColor(sf::Color::White);
-    this->text->setCharacterSize(12);
+
     this->text->setPosition( sf::Vector2f(
-        this->button.getPosition().x / 2.f - this->text->getGlobalBounds().getCenter().x,
-        this->button.getPosition().y / 2.f - this->text->getGlobalBounds().getCenter().y
+        this->button.getPosition().x + width / 2.f - this->text->getGlobalBounds().getCenter().x,
+        this->button.getPosition().y + height / 2.f - this->text->getGlobalBounds().getCenter().y
     ));
 
     this->defaultColor = defaultColor;
@@ -30,10 +28,11 @@ Button::Button(float x, float y, float width, float height, std::string message,
 
 Button::~Button()
 {
-    //dtor
+
+    delete this->text;
 }
 
-const bool Button::isPressed()
+bool Button::isPressed()
 {
     if(this->state == pressed)
     {
@@ -74,7 +73,8 @@ void Button::update(const sf::Vector2f mousePos){
     }
 }
 
-void Button::render(sf::RenderTarget* target)
+void Button::render(sf::RenderTarget& target)
 {
-    target->draw(this->button);
+    target.draw(this->button);
+    target.draw(*this->text);
 }

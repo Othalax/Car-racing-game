@@ -16,6 +16,7 @@ class MenuState
 
     protected:
         Button* gamestate;
+        Button* exit;
         sf::RectangleShape wiwiwi;
 
     private:

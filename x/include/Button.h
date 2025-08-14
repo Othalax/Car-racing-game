@@ -19,9 +19,9 @@ class Button
         Button(float x, float y, float width, float height, std::string message, sf::Color defaultColor, sf::Color hoverColor, sf::Color pressedColor);
         virtual ~Button();
 
-        const bool isPressed();
+        bool isPressed();
         void update(const sf::Vector2f mousePos);
-        void render(sf::RenderTarget* target);
+        void render(sf::RenderTarget& target);
 
     protected:
 
@@ -29,7 +29,7 @@ class Button
         short unsigned state;
 
         sf::RectangleShape button;
-        sf::Font* font;
+        sf::Font font;
         sf::Text* text;
 
         sf::Color defaultColor;
