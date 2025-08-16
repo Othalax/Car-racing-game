@@ -1,9 +1,9 @@
 #include "State.h"
 
-State::State(sf::RenderWindow* window, std::unordered_map<std::string,sf::Keyboard::Key> supportedKeys)
+State::State(sf::RenderWindow* window, std::unordered_map<std::string,sf::Keyboard::Key> supportedKeys, std::vector<std::unique_ptr<State>>* states)
+:states(states)
 {
     this->window = window;
-    this->ifEnd = false;
     this->supportedKeys = supportedKeys;
 }
 
@@ -12,17 +12,12 @@ State::~State()
     //dtor
 }
 
-const bool& State::getEnd() const{
-    return this->ifEnd;
-}
-
 void State::ending(){
 
 }
 
 void State::endState(){
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Escape)){
-        this->ifEnd = true;
         std::cout<<"StateEnd"<<std::endl;
     }
 }

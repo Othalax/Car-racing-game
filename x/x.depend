@@ -548,11 +548,11 @@
 1739965899 source:c:\users\domin\documents\car-racing-game\x\main.cpp
 	"Game.h"
 
-1743775452 c:\users\domin\documents\car-racing-game\x\include\game.h
+1755288117 c:\users\domin\documents\car-racing-game\x\include\game.h
 	<GameState.h>
 	<MenuState.h>
 
-1744187022 c:\users\domin\documents\car-racing-game\x\include\state.h
+1755288118 c:\users\domin\documents\car-racing-game\x\include\state.h
 	<Car.h>
 
 1743407169 c:\users\domin\documents\car-racing-game\x\include\car.h
@@ -571,26 +571,28 @@
 	<memory>
 	<string>
 
-1755017505 source:c:\users\domin\documents\car-racing-game\x\src\game.cpp
+1755288117 source:c:\users\domin\documents\car-racing-game\x\src\game.cpp
 	"Game.h"
 
-1744186985 source:c:\users\domin\documents\car-racing-game\x\src\state.cpp
+1755288538 source:c:\users\domin\documents\car-racing-game\x\src\state.cpp
 	"State.h"
 
 1743407443 source:c:\users\domin\documents\car-racing-game\x\src\car.cpp
 	"Car.h"
 
-1755194229 source:c:\users\domin\documents\car-racing-game\x\src\menustate.cpp
+1755324622 source:c:\users\domin\documents\car-racing-game\x\src\menustate.cpp
 	"MenuState.h"
 
-1755193918 c:\users\domin\documents\car-racing-game\x\include\menustate.h
-	<State.h>
+1755325467 c:\users\domin\documents\car-racing-game\x\include\menustate.h
+	<Game.h>
+	<GameState.h>
 	<Button.h>
+	<SettingState.h>
 
-1744019682 c:\users\domin\documents\car-racing-game\x\include\gamestate.h
+1755324835 c:\users\domin\documents\car-racing-game\x\include\gamestate.h
 	<State.h>
 
-1744019701 source:c:\users\domin\documents\car-racing-game\x\src\gamestate.cpp
+1755288117 source:c:\users\domin\documents\car-racing-game\x\src\gamestate.cpp
 	"GameState.h"
 
 1755194126 source:c:\users\domin\documents\car-racing-game\x\src\button.cpp
@@ -606,4 +608,10 @@
 	<vector>
 	<map>
 	<string>
+
+1755325075 source:c:\users\domin\documents\car-racing-game\x\src\settingstate.cpp
+	"SettingState.h"
+
+1755325075 c:\users\domin\documents\car-racing-game\x\include\settingstate.h
+	<State.h>
 

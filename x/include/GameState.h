@@ -7,14 +7,13 @@
 class GameState : public State
 {
     public:
-        GameState(sf::RenderWindow* window, std::unordered_map<std::string,sf::Keyboard::Key> supportedKeys);
+        GameState(sf::RenderWindow* window, std::unordered_map<std::string,sf::Keyboard::Key> supportedKeys, std::vector<std::unique_ptr<State>>* states);
         virtual ~GameState();
 
         void update(const float& dt);
         void render(sf::RenderTarget& target);
 
     protected:
-
         Car* player1;
         Car* player2;
 

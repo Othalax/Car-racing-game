@@ -1,7 +1,7 @@
 #include "GameState.h"
 
-GameState::GameState(sf::RenderWindow* window, std::unordered_map<std::string,sf::Keyboard::Key> supportedKeys)
-    :State (window, supportedKeys)
+GameState::GameState(sf::RenderWindow* window, std::unordered_map<std::string,sf::Keyboard::Key> supportedKeys, std::vector<std::unique_ptr<State>>* states)
+    :State (window, supportedKeys, states)
 {
     std::unordered_map<std::string,sf::Keyboard::Key> keys;
     keys.insert({"forward", sf::Keyboard::Key::W});

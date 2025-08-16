@@ -53,7 +53,7 @@ void Game::endApp(){
 }
 
 void Game::initStates(){
-    states.push_back(std::make_unique<MenuState>(this->window.get(), supportedKeys));
+    states.push_back(std::make_unique<MenuState>(this->window.get(), supportedKeys, &states));
 
 }
 
@@ -76,12 +76,7 @@ void Game::update(){
     this->updateEvents();
 
     if(!this->states.empty()){
-        this->states[0]->update(this->dt);
-
-        if(this->states[0]->getEnd()){
-            this->states[0]->ending();
-            this->states.erase(states.begin());
-        }
+        this->states.back()->update(this->dt);
     }
     else{
         this->endApp();
@@ -93,7 +88,7 @@ void Game::render(){
     this->window->clear();
 
     if(!this->states.empty()){
-        this->states[0]->render(*this->window);
+        this->states.back()->render(*this->window);
     }
 
     this->window->display();
