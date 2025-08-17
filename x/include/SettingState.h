@@ -1,8 +1,8 @@
 #ifndef SETTINGSTATE_H
 #define SETTINGSTATE_H
 
-#include <State.h>
-
+#include <MenuState.h>
+#include <Button.h>
 
 class SettingState
     : public State
@@ -11,9 +11,11 @@ class SettingState
         SettingState(sf::RenderWindow* window, std::unordered_map<std::string,sf::Keyboard::Key> supportedKeys, std::vector<std::unique_ptr<State>>* states);
         virtual ~SettingState();
 
+        void updateButtons();
         void update(const float& dt);
         void render(sf::RenderTarget& target);
     protected:
+        std::unordered_map<std::string, std::unique_ptr<Button>> buttons;
 
     private:
 };

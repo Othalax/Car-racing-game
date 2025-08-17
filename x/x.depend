@@ -580,7 +580,7 @@
 1743407443 source:c:\users\domin\documents\car-racing-game\x\src\car.cpp
 	"Car.h"
 
-1755324622 source:c:\users\domin\documents\car-racing-game\x\src\menustate.cpp
+1755325381 source:c:\users\domin\documents\car-racing-game\x\src\menustate.cpp
 	"MenuState.h"
 
 1755325467 c:\users\domin\documents\car-racing-game\x\include\menustate.h
@@ -609,9 +609,10 @@
 	<map>
 	<string>
 
-1755325075 source:c:\users\domin\documents\car-racing-game\x\src\settingstate.cpp
+1755459829 source:c:\users\domin\documents\car-racing-game\x\src\settingstate.cpp
 	"SettingState.h"
 
-1755325075 c:\users\domin\documents\car-racing-game\x\include\settingstate.h
-	<State.h>
+1755459722 c:\users\domin\documents\car-racing-game\x\include\settingstate.h
+	<MenuState.h>
+	<Button.h>
 
