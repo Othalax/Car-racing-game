@@ -1,6 +1,6 @@
 #include "Car.h"
 
-Car::Car(std::unordered_map<std::string,sf::Keyboard::Key> keys, std::string color, float x, float y, float angle, float length, float max_steering, float max_acceleration)
+Car::Car(std::unordered_map<std::string,sf::Keyboard::Key> keys, sf::Texture& texture, float x, float y, float angle, float length, float max_steering, float max_acceleration)
 {
     this->keys = keys;
     position = sf::Vector2f(x, y);
@@ -15,12 +15,6 @@ Car::Car(std::unordered_map<std::string,sf::Keyboard::Key> keys, std::string col
     acceleration = 0.0f;
     steering = 0.0f;
 
-    if (!texture.loadFromFile(color, false, sf::IntRect({10, 10}, {32, 32})))
-    {
-        std::cout<<"error\n";
-    }
-
-    this->texture = sf::Texture(color);
     this->car = new sf::Sprite(texture);
     this->car->setOrigin({100.f, 50.f});
     this->car->setPosition({x, y});

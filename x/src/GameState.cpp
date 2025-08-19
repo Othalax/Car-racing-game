@@ -8,13 +8,13 @@ GameState::GameState(sf::RenderWindow* window, std::unordered_map<std::string,sf
     keys.insert({"backward", sf::Keyboard::Key::S});
     keys.insert({"left", sf::Keyboard::Key::A});
     keys.insert({"right", sf::Keyboard::Key::D});
-    player1 = new Car(keys, "textures/bluecar.png",200.f, 200.f, 0.f, 100.f, 30.f, 200.f);
+    player1 = new Car(keys, textures["blueCar"],200.f, 200.f, 0.f, 100.f, 30.f, 200.f);
     std::unordered_map<std::string,sf::Keyboard::Key> keys2;
     keys2.insert({"forward", sf::Keyboard::Key::Up});
     keys2.insert({"backward", sf::Keyboard::Key::Down});
     keys2.insert({"left", sf::Keyboard::Key::Left});
     keys2.insert({"right", sf::Keyboard::Key::Right});
-    player2 = new Car(keys2, "textures/pinkcar.png",200.f, 200.f, 0.f, 100.f, 30.f, 200.f);
+    player2 = new Car(keys2, textures["pinkCar"] ,200.f, 200.f, 0.f, 100.f, 30.f, 200.f);
 }
 
 GameState::~GameState()

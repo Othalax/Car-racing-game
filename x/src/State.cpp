@@ -5,6 +5,7 @@ State::State(sf::RenderWindow* window, std::unordered_map<std::string,sf::Keyboa
 {
     this->window = window;
     this->supportedKeys = supportedKeys;
+    initTextures();
 }
 
 State::~State()
@@ -12,8 +13,24 @@ State::~State()
     //dtor
 }
 
-void State::ending(){
+void State::initTextures(){
+    std::ifstream ifs("config/textures.ini");
+    std::string textureName;
+    std::string texturePath;
 
+    if (ifs.is_open())
+    {
+        while (ifs >> textureName >> texturePath)
+        {
+            sf::Texture texture;
+            if (!texture.loadFromFile(texturePath))
+            {
+                std::cerr << "Failed to load " << texturePath << std::endl;
+            }
+            textures[textureName] = std::move(texture);
+        }
+    }
+    ifs.close();
 }
 
 void State::endState(){
