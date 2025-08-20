@@ -1,8 +1,9 @@
 #include "Button.h"
 
-Button::Button(float x, float y, float width, float height, std::string message, sf::Color defaultColor, sf::Color hoverColor, sf::Color pressedColor)
+Button::Button(sf::RenderWindow* window, float x, float y, float width, float height, std::string message, sf::Color defaultColor, sf::Color hoverColor, sf::Color pressedColor)
 {
-    this->state = idle;
+    this->window = window;
+    isStatePressed = false;
 
     if (!this->font.openFromFile("textures/fonts/NicoPaint-Monospaced.ttf")) {
         std::cout << "Error loading font\n";
@@ -34,7 +35,7 @@ Button::~Button()
 
 bool Button::isPressed()
 {
-    if(this->state == pressed)
+    if(isStatePressed && !sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))
     {
         return true;
     }
@@ -42,15 +43,24 @@ bool Button::isPressed()
 }
 
 void Button::update(const sf::Vector2f mousePos){
-    this->state = idle;
-    if (this->button.getGlobalBounds().contains(mousePos))
+    if (isStatePressed)
+    {
+        this->state = pressed;
+    }
+    else if (this->button.getGlobalBounds().contains(mousePos))
     {
         this->state = hover;
 
         if(sf::Mouse::isButtonPressed(sf::Mouse::Button::Left))
         {
             this->state = pressed;
+            isStatePressed = true;
         }
+
+    }
+    else
+    {
+        this->state = idle;
     }
 
     switch(this->state)

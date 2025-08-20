@@ -11,12 +11,12 @@
 #include <map>
 #include <string>
 
-enum buttonStates {idle = 0, hover, pressed};
+enum buttonStates {idle = 0, hover, pressed, change};
 
 class Button
 {
     public:
-        Button(float x, float y, float width, float height, std::string message, sf::Color defaultColor, sf::Color hoverColor, sf::Color pressedColor);
+        Button(sf::RenderWindow* window, float x, float y, float width, float height, std::string message, sf::Color defaultColor, sf::Color hoverColor, sf::Color pressedColor);
         virtual ~Button();
 
         bool isPressed();
@@ -26,7 +26,9 @@ class Button
     protected:
 
     private:
+        sf::RenderWindow* window;
         short unsigned state;
+        bool isStatePressed;
 
         sf::RectangleShape button;
         sf::Font font;
