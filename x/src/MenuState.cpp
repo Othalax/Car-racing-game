@@ -3,9 +3,9 @@
 MenuState::MenuState(sf::RenderWindow* window, std::unordered_map<std::string,sf::Keyboard::Key> supportedKeys, std::vector<std::unique_ptr<State>>* states)
     : State(window, supportedKeys, states)
 {
-    this->gamestate = new Button(window, 150.f, 150.f, 150.f, 50.f, "Start", sf::Color::Magenta, sf::Color::Blue, sf::Color::Cyan);
-    this->exit = new Button(window, 150.f, 250.f, 150.f, 50.f, "Exit", sf::Color::Magenta, sf::Color::Blue, sf::Color::Cyan);
-    this->settings = new Button(window, 150.f, 350.f, 150.f, 50.f, "Settings", sf::Color::Magenta, sf::Color::Blue, sf::Color::Cyan);
+    this->gamestate = new Button(window, 150.f, 150.f, 150.f, 50.f, "Start", textures["baseButton"], textures["baseButtonClicked"]);
+    this->exit = new Button(window, 150.f, 250.f, 150.f, 50.f, "Exit", textures["baseButton"], textures["baseButtonClicked"]);
+    this->settings = new Button(window, 150.f, 350.f, 150.f, 50.f, "Settings", textures["baseButton"], textures["baseButtonClicked"]);
     this->wiwiwi.setFillColor(sf::Color(100, 100, 100));
     this->wiwiwi.setPosition({100.0f, 100.0f});
     this->wiwiwi.setSize({200.0f, 200.0f});

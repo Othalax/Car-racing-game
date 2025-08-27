@@ -1,10 +1,11 @@
 #include "Button.h"
 
-Button::Button(sf::RenderWindow* window, float x, float y, float width, float height, std::string message, sf::Color defaultColor, sf::Color hoverColor, sf::Color pressedColor)
+Button::Button(sf::RenderWindow* window, float x, float y, float width, float height, std::string message, sf::Texture& defaultTexture, sf::Texture& hoverTexture)
+    : window(window),
+      defaultTexture(defaultTexture),
+      hoverTexture(hoverTexture),
+      isStatePressed(false)
 {
-    this->window = window;
-    isStatePressed = false;
-
     if (!this->font.openFromFile("textures/fonts/NicoPaint-Monospaced.ttf")) {
         std::cout << "Error loading font\n";
     }
@@ -12,18 +13,14 @@ Button::Button(sf::RenderWindow* window, float x, float y, float width, float he
     this->button.setPosition(sf::Vector2f(x, y));
     this->button.setSize(sf::Vector2f(width, height));
     this->text = new sf::Text(this->font, message, 20);
-    this->text->setFillColor(sf::Color::White);
+    this->text->setFillColor(sf::Color::Black);
 
     this->text->setPosition( sf::Vector2f(
         this->button.getPosition().x + width / 2.f - this->text->getGlobalBounds().getCenter().x,
         this->button.getPosition().y + height / 2.f - this->text->getGlobalBounds().getCenter().y
     ));
 
-    this->defaultColor = defaultColor;
-    this->hoverColor = hoverColor;
-    this->pressedColor = pressedColor;
-
-    this->button.setFillColor(this->defaultColor);
+    this->button.setTexture(&defaultTexture);
 
 }
 
@@ -42,12 +39,9 @@ bool Button::isPressed()
     return false;
 }
 
-void Button::update(const sf::Vector2f mousePos){
-    if (isStatePressed)
-    {
-        this->state = pressed;
-    }
-    else if (this->button.getGlobalBounds().contains(mousePos))
+void Button::update(const sf::Vector2f mousePos)
+{
+    if (this->button.getGlobalBounds().contains(mousePos))
     {
         this->state = hover;
 
@@ -66,15 +60,11 @@ void Button::update(const sf::Vector2f mousePos){
     switch(this->state)
     {
     case idle:
-        this->button.setFillColor(this->defaultColor);
+        this->button.setTexture(&defaultTexture);
         break;
 
     case hover:
-        this->button.setFillColor(this->hoverColor);
-        break;
-
-    case pressed:
-        this->button.setFillColor(this->pressedColor);
+        this->button.setTexture(&hoverTexture);
         break;
 
     default:

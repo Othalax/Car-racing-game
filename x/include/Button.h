@@ -16,7 +16,7 @@ enum buttonStates {idle = 0, hover, pressed, change};
 class Button
 {
     public:
-        Button(sf::RenderWindow* window, float x, float y, float width, float height, std::string message, sf::Color defaultColor, sf::Color hoverColor, sf::Color pressedColor);
+        Button(sf::RenderWindow* window, float x, float y, float width, float height, std::string message, sf::Texture& defaultTexture, sf::Texture& hoverTexture);
         virtual ~Button();
 
         bool isPressed();
@@ -28,15 +28,14 @@ class Button
     private:
         sf::RenderWindow* window;
         short unsigned state;
-        bool isStatePressed;
 
         sf::RectangleShape button;
         sf::Font font;
         sf::Text* text;
+        sf::Texture& defaultTexture;
+        sf::Texture& hoverTexture;
 
-        sf::Color defaultColor;
-        sf::Color pressedColor;
-        sf::Color hoverColor;
+        bool isStatePressed;
 };
 
 #endif // BUTTON_H
