@@ -39,6 +39,11 @@ bool Button::isPressed()
     return false;
 }
 
+void Button::changeState()
+{
+    this->isStatePressed = false;
+}
+
 void Button::update(const sf::Vector2f mousePos)
 {
     if (this->button.getGlobalBounds().contains(mousePos))
@@ -68,7 +73,6 @@ void Button::update(const sf::Vector2f mousePos)
         break;
 
     default:
-        this->button.setFillColor(sf::Color::Yellow);
         break;
     }
 }

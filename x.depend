@@ -626,7 +626,7 @@
 1755324835 c:\users\domin\documents\car-racing-game\include\gamestate.h
 	<State.h>
 
-1755713776 c:\users\domin\documents\car-racing-game\include\state.h
+1757022498 c:\users\domin\documents\car-racing-game\include\state.h
 	<Car.h>
 
 1755628312 c:\users\domin\documents\car-racing-game\include\car.h
@@ -651,7 +651,7 @@
 	<Button.h>
 	<SettingState.h>
 
-1756326743 c:\users\domin\documents\car-racing-game\include\button.h
+1757021917 c:\users\domin\documents\car-racing-game\include\button.h
 	<SFML/Graphics.hpp>
 	<SFML/Window.hpp>
 	<SFML/System/Vector2.hpp>
@@ -662,28 +662,28 @@
 	<map>
 	<string>
 
-1755459722 c:\users\domin\documents\car-racing-game\include\settingstate.h
+1757019820 c:\users\domin\documents\car-racing-game\include\settingstate.h
 	<MenuState.h>
 	<Button.h>
 
-1756326626 source:c:\users\domin\documents\car-racing-game\src\button.cpp
+1757021917 source:c:\users\domin\documents\car-racing-game\src\button.cpp
 	"Button.h"
 
-1755628264 source:c:\users\domin\documents\car-racing-game\src\car.cpp
+1757018866 source:c:\users\domin\documents\car-racing-game\src\car.cpp
 	"Car.h"
 
-1756411505 source:c:\users\domin\documents\car-racing-game\src\game.cpp
+1756411569 source:c:\users\domin\documents\car-racing-game\src\game.cpp
 	"Game.h"
 
-1756326269 source:c:\users\domin\documents\car-racing-game\src\gamestate.cpp
+1757022539 source:c:\users\domin\documents\car-racing-game\src\gamestate.cpp
 	"GameState.h"
 
 1756326166 source:c:\users\domin\documents\car-racing-game\src\menustate.cpp
 	"MenuState.h"
 
-1756326166 source:c:\users\domin\documents\car-racing-game\src\settingstate.cpp
+1757022202 source:c:\users\domin\documents\car-racing-game\src\settingstate.cpp
 	"SettingState.h"
 
-1755713776 source:c:\users\domin\documents\car-racing-game\src\state.cpp
+1757022648 source:c:\users\domin\documents\car-racing-game\src\state.cpp
 	"State.h"
 

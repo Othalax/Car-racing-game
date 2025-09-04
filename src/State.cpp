@@ -1,5 +1,8 @@
 #include "State.h"
 
+std::string State::player1car = "pinkCar";
+std::string State::player2car = "blueCar";
+
 State::State(sf::RenderWindow* window, std::unordered_map<std::string,sf::Keyboard::Key> supportedKeys, std::vector<std::unique_ptr<State>>* states)
 :states(states)
 {

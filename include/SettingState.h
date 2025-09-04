@@ -16,6 +16,13 @@ class SettingState
         void render(sf::RenderTarget& target);
     protected:
         std::unordered_map<std::string, std::unique_ptr<Button>> buttons;
+        std::vector<std::string> carTypes;
+
+        sf::Sprite* player1view;
+        sf::Sprite* player2view;
+
+        void initButtons();
+        void initCarTypes();
 
     private:
 };

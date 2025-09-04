@@ -20,6 +20,7 @@ class Button
         virtual ~Button();
 
         bool isPressed();
+        void changeState();
         void update(const sf::Vector2f mousePos);
         void render(sf::RenderTarget& target);
 
